@@ -1,0 +1,29 @@
+// Fonts
+$ms500: "Museo Sans Cyrl 500", "Arial", sans-serif;
+$ms900: "Museo Sans Cyrl 900", "Arial Black", sans-serif;
+
+// Viewports
+$mobile-width: 320px;
+$mdmobile-width: 420px;
+$bgmobile-width: 480px;
+$tablet-width: 768px;
+$laptop-width: 1024px;
+$desktop-width: 1440px; // 1440 - 216 = 1224px
+
+// Pixel density
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Gutters
+$mobile-pads: 16px;
+$tablet-pads: 25px;
+$laptop-pads: 45px;
+$desktop-pads: 108px;
+
+// Main Colors
+$watermelon: rgb(250, 62, 72); //#fa3e48;
+$navColor: rgb(51, 102, 255); //#3366ff;
+$landingColor: rgb(77, 121, 255); //#4d79ff;
+$formColor: rgb(95, 135, 255); //#5f87ff;
+$charcoal-grey: rgb(52, 58, 64); //#343a40;
+$pinkish-grey: rgb(195, 195, 195); //#c3c3c3;

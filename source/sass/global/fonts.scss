@@ -1,0 +1,73 @@
+/*// Black - 900
+// bold - 700
+// light - 100
+// medium - 500
+// regular - 300*/
+
+// Основные
+@font-face {
+    font-family: 'Museo Sans Cyrl 500'; /* MuseoSansMedium */
+
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+
+    src:
+        url('../fonts/MuseoSansMedium/MuseoSansCyrl-500.woff2') format('woff2'),
+        url('../fonts/MuseoSansMedium/MuseoSansCyrl-500.woff') format('woff'),
+        url('../fonts/MuseoSansMedium/MuseoSansCyrl-500.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 900'; /* MuseoSansBlack */
+
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+
+    src:
+        url('../fonts/MuseoSansBlack/MuseoSansCyrl-900.woff2') format('woff2'),
+        url('../fonts/MuseoSansBlack/MuseoSansCyrl-900.woff') format('woff'),
+        url('../fonts/MuseoSansBlack/MuseoSansCyrl-900.ttf') format('truetype');
+}
+
+// Дополнительные
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 300'; /* MuseoSansRegular */
+
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+
+    src:
+        url('../fonts/MuseoSansRegular/MuseoSansCyrl-300.woff2') format('woff2'),
+        url('../fonts/MuseoSansRegular/MuseoSansCyrl-300.woff') format('woff'),
+        url('../fonts/MuseoSansRegular/MuseoSansCyrl-300.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 700'; /* MuseoSansBold */
+
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+
+    src:
+        url('../fonts/MuseoSansBold/MuseoSansCyrl-700.woff2') format('woff2'),
+        url('../fonts/MuseoSansBold/MuseoSansCyrl-700.woff') format('woff'),
+        url('../fonts/MuseoSansBold/MuseoSansCyrl-700.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl 100'; /* MuseoSansLight */
+
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+
+    src:
+        url('../fonts/MuseoSansLight/MuseoSansCyrl-100.woff2') format('woff2'),
+        url('../fonts/MuseoSansLight/MuseoSansCyrl-100.woff') format('woff'),
+        url('../fonts/MuseoSansLight/MuseoSansCyrl-100.ttf') format('truetype');
+}

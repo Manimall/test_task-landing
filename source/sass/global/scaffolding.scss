@@ -1,0 +1,97 @@
+html,
+body {
+  font: 17px/23px $ms500;
+  box-sizing: border-box;
+
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+
+  user-select: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  @include reset-list();
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $mobile-pads;
+  min-width: $mobile-width;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 0 $tablet-pads;
+    min-width: $tablet-width;
+  }
+
+  @include laptop {
+    padding: 0 $laptop-pads;
+    min-width: $laptop-width;
+  }
+
+  @include desktop {
+    padding: 0 $desktop-pads;
+    max-width: $desktop-width;
+  }
+}
+
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+textarea,
+input,
+button {
+  font-size: 100%;
+}
