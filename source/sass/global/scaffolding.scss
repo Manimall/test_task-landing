@@ -4,10 +4,11 @@ body {
   box-sizing: border-box;
 
   min-width: 320px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
-  background-color: #ffffff;
+  background-color: #AA2572;
+  color: $charcoal-grey;
 
   user-select: none;
 }
@@ -24,6 +25,7 @@ img {
 }
 
 a {
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
 }

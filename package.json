@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy",
-  "version": "13.0.0",
+  "name": "landingPage",
+  "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Лэндинг компании Digital Tsunami",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "^8.1.0",

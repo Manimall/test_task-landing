@@ -1,0 +1,1 @@
+$('.advantages__list').slick();

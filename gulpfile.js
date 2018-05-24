@@ -2,10 +2,11 @@
 "use strict";
 
 var gulp = require("gulp");
-var less = require("gulp-less");
+var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 var include = require("posthtml-include");
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
@@ -18,9 +19,9 @@ var run = require("run-sequence");
 var del = require("del");
 
 gulp.task("style", function() {
-  gulp.src("source/less/style.less")
+  gulp.src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(less())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -32,20 +33,29 @@ gulp.task("style", function() {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/sprite/*.svg")
+  return gulp.src("source/img/for_sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/sprite/"));
 });
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
+    .pipe(plumber())
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(htmlmin({
+      minifyJS: true,
+      minifyURLs: true,
+      collapseWhitespace: false,
+      removeComments: true,
+      sortAttributes: true,
+      sortClassName: true
+    }))
+    .pipe(gulp.dest("build/"));
 });
 
 gulp.task("images", function () {
@@ -73,6 +83,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
+    "source/slick/**",
     "source/js/**"
     ], {
       base: "source"
@@ -81,13 +92,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("build", function (done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    // "sprite",
-    "html",
-    done);
+  run("clean", "copy", "sprite", "style","html", done);
 });
 
 gulp.task("serve", function() {
@@ -99,6 +104,7 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]).on("change", server.reload);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["concat"]).on("change", server.reload);
 });
