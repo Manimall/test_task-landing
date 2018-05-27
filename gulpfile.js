@@ -17,6 +17,7 @@ var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
+var livereload = require('gulp-livereload');
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -106,5 +107,5 @@ gulp.task("serve", function() {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]).on("change", server.reload);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js", ["concat"]).on("change", server.reload);
+  gulp.watch("source/js/*.js").on("change", server.reload);
 });

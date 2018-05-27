@@ -1,0 +1,106 @@
+.promo {
+  background-color: $landingColor;
+}
+
+.promo__wrapper {
+  min-height: 495px;
+
+  @include tablet {
+    min-height: 700px;
+  }
+}
+
+.promo__heading {
+  padding-bottom: 27px;
+  padding-top: 23px;
+  color: #ffffff;
+  text-align: center;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.promo__title {
+  max-width: 275px;
+  font: 32px/42px $ms900;
+  margin: 0 auto;
+
+  @include tablet {
+    font: 52px/64px $ms900;
+    max-width: 450px;
+  }
+
+  @include desktop {
+    max-width: 800px;
+  }
+}
+
+.promo__text {
+  padding-top: 21px;
+  font: 20px/26px $ms500;
+
+  @include tablet {
+    font: 32px/42px $ms500;
+  }
+}
+
+.promo__top-bg {
+  padding-top: 30px;
+  height: 140px;
+  margin: 0 auto;
+  max-width: 450px;
+  background:
+    url('../img/vector/320/icon-advertising.svg') no-repeat 0 92% / 68px 63px,
+    url('../img/vector/320/icon-rating.svg') no-repeat 40% 40% / 30px,
+    url('../img/vector/320/icon-business.svg') no-repeat 65% 92% / 28px 27px,
+    url('../img/vector/320/icon-support.svg') no-repeat 101% 48% / 59px 55px;
+
+  @include tablet {
+    padding-top: 100px;
+    height: 160px;
+    max-width: 768px;
+    background:
+      url('../img/vector/320/icon-advertising.svg') no-repeat 0 105% / 133px 128px,
+      url('../img/vector/320/icon-rating.svg') no-repeat 40% 45% / 43px 43px,
+      url('../img/vector/320/icon-business.svg') no-repeat 65% 84% / 41px 38px,
+      url('../img/vector/320/icon-support.svg') no-repeat 101% 62% / 116px 112px;
+      box-sizing: content-box;
+  }
+
+  @include desktop {
+    max-width: 1110px;
+    background:
+      url('../img/vector/320/icon-advertising.svg') no-repeat 0 105% / 133px 128px,
+      url('../img/vector/320/icon-rating.svg') no-repeat 40% 45% / 43px 43px,
+      url('../img/vector/320/icon-business.svg') no-repeat 65% 84% / 41px 38px,
+      url('../img/vector/320/icon-support.svg') no-repeat 95% 62% / 116px 112px;
+  }
+}
+
+.promo__bottom-bg {
+  height: 102px;
+  padding-bottom: 63px;
+  margin: 0 auto;
+  max-width: 450px;
+  background:
+    url('../img/vector/320/icon-contact.svg') no-repeat 5% 5% / 37px 30px,
+    url('../img/vector/320/icon-sales.svg') no-repeat 48% 100% / 72px 65px,
+    url('../img/vector/320/icon-shop.svg') no-repeat 94% 32% / 47px 39px;
+
+  @include tablet {
+    height: 220px;
+    padding-bottom: 0;
+    max-width: 768px;
+    margin-top: -50px;
+    background:
+      url('../img/vector/320/icon-contact.svg') no-repeat 16% -4% / 70px 60px,
+      url('../img/vector/320/icon-sales.svg') no-repeat 48% 105% / 140px 127px,
+      url('../img/vector/320/icon-shop.svg') no-repeat 87% 27% / 89px 79px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,94 @@
+.page-header {
+  //smth
+}
+
+.page-header--index {
+  //smth
+}
+
+.page-header__top {
+  background-color: $navColor;
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(122px, 1fr) 40px;
+  grid-gap: 13px;
+
+  @include tablet {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  @include realdt {
+    padding-left: 108px;
+    padding-right: 108px;
+
+    grid-template-columns: 4fr 2fr 1fr;
+  }
+}
+
+.page-header__contacts {
+  padding-top: 18px;
+  padding-bottom: 12px;
+
+  @include tablet {
+    justify-self: center;
+  }
+}
+
+.page-header__contacts-city {
+  display: none;
+
+  @include realdt {
+    display: inline-block;
+    color: #ffffff;
+    padding-right: 15px;
+  }
+}
+
+.page-header__contacts-tel {
+  font: 14px/3 $ms700;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.page-header__help {
+  position: relative;
+
+  @include tablet {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+.page-header__btn-help {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    text-transform: initial;
+    font: 17px $ms500;
+    letter-spacing: 0.3px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.page-header__mini-btn {
+  @include pseudo-element ();
+  width: 40px;
+  height: 40px;
+  top: 17px;
+  right: 6px;
+  box-shadow: 0px 10px 10px 0 rgba(77, 121, 255, 0.25);
+  border-radius: 50%;
+  background-color: $watermelon;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__icon-callback {}

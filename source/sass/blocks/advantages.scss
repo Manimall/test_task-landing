@@ -1,0 +1,80 @@
+.advantages {
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.advantages__title {
+  width: 210px;
+  padding-top: 55px;
+  padding-bottom: 22px;
+  margin: 0 auto;
+
+  text-align: center;
+  font: 32px/1.31 $ms900;
+}
+
+.advantages__key-words {
+  text-align: center;
+  color: $charcoal-grey;
+  font: 20px/1.3 $ms500;
+}
+
+.advantages__key-words a {
+  color: $navColor;
+  font: 20px/1.3 $ms500;
+  text-transform: initial;
+}
+
+.advantages__list {
+  @include reset-list();
+  padding-top: 57px;
+  margin: 0 auto;
+  display: grid;
+  // grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background-color: $navColor;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center center;
+  }
+}
+
+.advantages__item--icon-clock::before {
+  background-image: url("../img/vector/320/icon-time.svg");
+}
+
+.advantages__item--icon-target {
+
+}
+
+.advantages__item--icon-quality::before {
+  background-image: url('../img/raster/768/png/icon-numbers.png');
+}
+
+.advantages__text {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+  min-width: 186px;
+  max-width: 215px;
+  font: 23px/1.33 $ms900;
+}

@@ -42,6 +42,18 @@
   }
 }
 
+@mixin workswth {
+  @media (min-width: $works-width) {
+    @content;
+  }
+}
+
+@mixin realdt {
+  @media (min-width: $realdt-width) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

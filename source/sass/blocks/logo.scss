@@ -1,0 +1,27 @@
+.logo {
+  padding-top: 28px;
+  padding-bottom: 21px;
+  display: flex;
+
+  @include tablet {
+    align-self: end;
+    padding-bottom: 16px;
+  }
+}
+
+.logo__img {
+  width: 110px;
+
+  @include tablet {
+    width: 130px;
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    padding-left: 30px;
+  }
+}

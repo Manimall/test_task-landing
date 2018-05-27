@@ -7,7 +7,7 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  background-color: #AA2572;
+  background-color: #ffffff;
   color: $charcoal-grey;
 
   user-select: none;
@@ -22,6 +22,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  width: auto;
 }
 
 a {
@@ -87,9 +88,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+p {
   margin: 0;
-  font-weight: 400;
+  //font-weight: 400;
 }
 
 textarea,
