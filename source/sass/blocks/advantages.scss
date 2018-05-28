@@ -58,6 +58,12 @@
   }
 }
 
+.advantages__logo {
+  fill: red;
+  position: absolute;
+  background-position: center center;
+}
+
 .advantages__item--icon-clock::before {
   background-image: url("../img/vector/320/icon-time.svg");
 }
