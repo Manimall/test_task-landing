@@ -1,0 +1,36 @@
+.feedback {
+  background-color: $landingColor;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-height: 550px;
+
+  @include tablet {
+    max-height: 700px;
+    padding-bottom: 81px;
+    padding-top: 60px;
+  }
+}
+
+.feedback__title {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font: 32px/42px $ms900;
+  color: #ffffff;
+  text-align: center;
+
+  @include tablet {
+    font: 52px/64px $ms900;
+  }
+}
+
+.feedback__advice {
+  color: #ffffff;
+  font: 20px/26px $ms500;
+  text-align: center;
+  padding-bottom: 20px;
+
+  @include tablet {
+    font: 24px/42px $ms500;
+    padding-bottom: 0;
+  }
+}

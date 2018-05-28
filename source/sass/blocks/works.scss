@@ -1,11 +1,10 @@
-.works {}
-
-.works__wrapper {
- //smth
+.works {
+  padding-bottom: 60px;
+  padding-top: 40px;
 }
 
 .works__title {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 28px;
   font: 32px/42px $ms900;
   color: $charcoal-grey;
@@ -24,17 +23,13 @@
 .works__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
-  grid-gap: 12px;
+  grid-gap: 24px;
   justify-content: space-evenly;
 
   @include tablet {
     grid-template-columns: repeat(auto-fit, 348px);
     padding-right: 24px;
     padding-left: 24px;
-  }
-
-  @include workswth {
-    justify-content: space-around;
   }
 
   @include desktop {
@@ -47,8 +42,16 @@
   }
 }
 
-.works__item {
-  //smth
+.works__item:hover {
+  box-shadow: 8px -4px 10px 10px rgba(77, 121, 255, 0.25);
+}
+
+.works__item:hover .works__name {
+  text-shadow: 6px -3px 5px black;
+}
+
+.works__item:hover .works__name a {
+  color: yellow;
 }
 
 .works__link {
@@ -57,10 +60,37 @@
 
 .works__img {
   width: auto;
+  height: 490px;
+
+  @include tablet {
+    height: 531px;
+  }
+
+  @include desktop {
+    height: 600px;
+  }
 }
 
-.works__img > picture {
+.works__link > picture {
   width: auto;
 }
 
-.works__name {}
+.works__name {
+  display: flex;
+  justify-content: center;
+  margin-top: -63px;
+
+  @include tablet {
+    justify-content: start;
+    padding-left: 32px;
+  }
+}
+
+.works__name a {
+  font: 22px/30px $ms900;
+  text-transform: unset;
+
+  @include tablet {
+    font: 24px/42px $ms900;
+  }
+}

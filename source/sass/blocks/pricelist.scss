@@ -1,0 +1,54 @@
+.pricelist {
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.pricelist__wrapper {
+  @include desktop {
+    max-width: 1560px;
+  }
+}
+
+.pricelist__heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.pricelist__title {
+  font: 32px/42px $ms900;
+  color: $charcoal-grey;
+  max-width: 240px;
+  padding-bottom: 23px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 650px;
+  }
+}
+
+.pricelist__slogan {
+  color: $charcoal-grey;
+  font: 20px/26px $ms500;
+}
+
+.pricelist__slogan span {
+  color: $navColor;
+}
+
+.pricelist__list {
+  max-width: 450px;
+  padding-top: 40px;
+  padding-left: 0;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 1600px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, 392px);
+    justify-content: space-between;
+  }
+}
+
+.pricelist__item {}
