@@ -93,7 +93,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("clean", function () {
-  return del("source/img/newVector/for_sprite/**/*");
+  return del("source/img/newVector/");
   return del("build");
 });
 

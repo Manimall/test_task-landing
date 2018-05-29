@@ -10,4 +10,5 @@ npm-debug.*
 *.docx
 Museo-Sans/
 build/
+source/img/newVector
 Thumbs.db
