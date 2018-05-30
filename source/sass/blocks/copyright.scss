@@ -1,0 +1,18 @@
+.copyright {
+  min-width: 140px;
+}
+
+.copyright__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+}
+
+.copyright__text {
+  font: 17px $ms500;
+  color: #ffffff;
+}

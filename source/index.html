@@ -75,9 +75,9 @@
       </li>
       <li class="advantages__item advantages__item--icon-target">
         <p class="advantages__text">Конверсия <br> от 2 до 35%</p>
-        <svg class="advantages__logo" width="64" height="61">
+        <!-- <svg class="advantages__logo" width="64" height="61">
           <use xlink:href="#icon-numbers"></use>
-        </svg>
+        </svg> -->
       </li>
       <li class="advantages__item advantages__item--icon-quality">
         <p class="advantages__text">Сделали уже более 100 сайтов</p>
@@ -319,57 +319,60 @@
 
   <section class="contacts">
     <div class="contacts__info">
-      <div class="contacts__wrapper container">
+      <div class="contacts__wrapper">
 
         <div class="contacts__heading">
-          <a class="contacts__logo logo" href="https://tsunami.group/">
+          <a class="contacts__logo" href="https://tsunami.group/">
             <svg class="contacts__logo-img" width="132" height="28" role="img">
               <title>Компания Digital Tsunami</title>
-              <use xlink:href="#icon-contacts-logo"></use>
+              <use xlink:href="#logo-contacts"></use>
             </svg>
-            <p class="logo__text">digital-агентство</p>
+            <p class="contacts__logo-text">digital-агентство</p>
           </a>
+          <p class="contacts__logoDesktop-text">digital-агентство</p>
         </div>
 
         <ul class="contacts__list">
 
           <li class="contacts__item">
             <p class="contacts__text">г. Иваново, <br> ул. Суворова, д. 39, оф. 448б</p>
-            <svg width="18" height="23" role="img">
+            <svg class="contacts__svg-address" width="18" height="23" role="img">
               <use xlink:href="#icon-address"></use>
             </svg>
           </li>
 
           <li class="contacts__item">
             <p class="contacts__text">Пн-Пт: с  9.00 до 18.00</p>
-            <svg width="18" height="18" role="img">
+            <svg class="contacts__svg-time" width="18" height="18" role="img">
               <use xlink:href="#icon-time"></use>
             </svg>
           </li>
 
           <li class="contacts__item">
             <p class="contacts__text">+7 (4932) 666-736</p>
-            <svg width="18" height="18" role="img">
+            <svg class="contacts__svg-phone" width="18" height="18" role="img">
               <use xlink:href="#icon-phone"></use>
             </svg>
           </li>
 
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--alternative">
             <p class="contacts__text">+7 (960) 513-29-38</p>
-            <svg width="56" height="58" role="img">
-              <use xlink:href="#icon-viber"></use>
-            </svg>
-            <svg width="16" height="16" role="img">
-              <use xlink:href="#icon-whatsapp"></use>
-            </svg>
-            <svg width="18" height="18" role="img">
-              <use xlink:href="#icon-phone-contacts"></use>
-            </svg>
+            <div class="contacts__phone-img">
+              <svg class="contacts__svg-viber" width="23" height="23" role="img">
+                <use xlink:href="#icon-viber"></use>
+              </svg>
+              <svg class="contacts__svg-whatsapp" width="21" height="21" role="img">
+                <use xlink:href="#icon-whatsapp"></use>
+              </svg>
+              <svg class="contacts__svg-phoneContact" width="18" height="18" role="img">
+                <use xlink:href="#icon-phone-contacts"></use>
+              </svg>
+            </div>
           </li>
 
           <li class="contacts__item">
             <p class="contacts__text">mail@tsunami.group</p>
-            <svg width="19" height="15" role="img">
+            <svg class="contacts__svg-mail" width="19" height="15" role="img">
               <use xlink:href="#icon-email"></use>
             </svg>
           </li>
@@ -381,14 +384,73 @@
   </section>
 
   <footer class="page-footer">
-    <div class="page-footer__logo logo"></div>
-    <div class="page-footer__copyright copyright"></div>
-    <div class="page-footer__social social"></div>
+    <div class="page-footer__wrapper container">
+
+      <div class="page-footer__logo">
+        <a class="page-footer__logo-link" href="https://tsunami.group/">
+          <svg class="page-footer__logo-svg" width="132" height="28" role="img">
+            <use xlink:href="#logo"></use>
+          </svg>
+          <p class="page-footer__logo-text">digital-агентство</p>
+        </a>
+        <p class="page-footer__logoTablet-text">digital-агентство</p>
+      </div>
+
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
+        <ul class="social__list">
+
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/" target="_blank" aria-label="Переход на нашу страницу в Вконтакте">Вконтакте
+              <svg width="32" height="32" role="img">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/" target="_blank" aria-label="Переход на страницу нашей компании в Фейсбуке">Фейсбук
+              <svg width="32" height="32" role="img">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link social__link--tv" href="https://twitter.com/" target="_blank" aria-label="Переход на страницу нашей компании в Твиттере">Твиттер
+              <svg width="32" height="32" role="img">
+                <use xlink:href="#icon-tv"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link social__link--gp" href="https://plus.google.com/discover" target="_blank" aria-label="Переход на нашу страничку в социальной сети Google plus">google plus
+              <svg width="32" height="32" role="img">
+                <use xlink:href="#icon-gp"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+        <h2 class="visually-hidden">Правообладатель</h2>
+        <div class="copyright__item">
+          <p class="copyright__text">© 2017</p>
+        </div>
+      </div>
+
+    </div>
   </footer>
 
   <script src="js/jquery 3.3.1.min.js"></script>
   <!-- <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="js/getting-started.js"></script> -->
+  <script src="js/map.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZef9VPHAYfM1gCURr-_CfjkiFLwld4rU&callback=initialize"></script>
 
 </body>
 </html>

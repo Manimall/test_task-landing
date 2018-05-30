@@ -81,4 +81,16 @@
   @include tablet {
     width: 250px;
   }
+
+  &:hover {
+    box-shadow: 3px 5px 10px 5px $charcoal-grey;
+    background-color: darken(saturate($watermelon, 40%), 4%);
+    transition: all 0.5s ease;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.75;
+    outline: none;
+  }
 }

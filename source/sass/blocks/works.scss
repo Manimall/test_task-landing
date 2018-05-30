@@ -54,6 +54,20 @@
   color: yellow;
 }
 
+.works__item:active,
+.works__item:focus {
+  outline: none;
+  transform: scale(0.96);
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.works__item:active .works__name a,
+.works__item:focus .works__name a {
+  fon-size: 20px;
+  color: rgba(255, 255, 10, 0.75);
+}
+
 .works__link {
   width: auto;
 }

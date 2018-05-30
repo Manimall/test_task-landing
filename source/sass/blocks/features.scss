@@ -8,7 +8,7 @@
   border: solid 1px $watermelon;
   border-radius: 4px;
   min-width: 254px;
-  transition: all 0.4s ease-in;
+  transition: all 0.5s ease-in;
 
   &:hover {
     border: solid 1px $navColor;
@@ -149,10 +149,19 @@
 
   &:hover {
     transform: scale(1.05);
+    box-shadow: 2px 6px 0 $charcoal-grey;
     transition: all 0.4s ease-in;
   }
 }
 
 .features:hover .features__btn {
   transform: scale(1.05);
+  box-shadow: 2px 6px 0 $charcoal-grey;
+}
+
+.features__btn:active,
+.features__btn:focus {
+  outline: none;
+  transform: scale(0.95);
+  opacity: 0.7;
 }

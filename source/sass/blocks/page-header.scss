@@ -74,11 +74,26 @@
     margin-top: 12px;
     margin-bottom: 12px;
     padding: 17px 25px 15px;
+
+    &:hover {
+      box-shadow: 3px 5px 10px 5px $charcoal-grey;
+      background-color: darken(saturate($watermelon, 40%), 4%);
+      transition: all 0.5s ease;
+    }
+
+    &:active,
+    &:focus {
+      opacity: 0.75;
+      box-shadow: 2px 6px 0 #343a40;
+      outline: none;
+    }
   }
 }
 
 .page-header__mini-btn {
-  @include pseudo-element ();
+  @include pseudo-element ("", absolute, flex);
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   top: 17px;
@@ -90,6 +105,50 @@
   @include tablet {
     display: none;
   }
+}
+
+.page-header__icon-callback {
+  fill: #ffffff;
+}
+
+.page-header__mini-btn:hover {
+  box-shadow: 2px 4px 4px green;
+  transition: all 0.4s ease-in-out;
+}
+
+.page-header__mini-btn:active,
+.page-header__mini-btn:focus {
+  opacity: 0.7;
+  transition: all 0.25s ease-in-out;
+}
+
+.page-header__mini-btn:hover .page-header__icon-callback {
+  fill: yellow;
+  transform: scale(1.15);
+  transition: all 0.4s ease-in-out;
+}
+
+.page-header__mini-btn:active .page-header__icon-callback,
+.page-header__mini-btn:focus .page-header__icon-callback {
+  fill: yellow;
+  transform: scale(1.5);
+  transition: all 0.25s ease-in-out;
+}
+
+.page-header__mini-btn:focus {
+  outline: none;
+}
+
+.page-header__logo:hover .logo__img{
+  transform: scale(1.1);
+}
+
+.page-header__logo:active .logo__img,
+.page-header__logo:active .logo__text,
+.page-header__logo:focus,
+.page-header__logo:focus {
+  opacity: 0.5;
+  outline: none;
 }
 
 .page-header__icon-callback {}

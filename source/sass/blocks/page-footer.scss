@@ -1,0 +1,97 @@
+.page-footer {
+  background-color: $navColor;
+}
+
+.page-footer__wrapper {
+  padding-top: 44px;
+  padding-bottom: 43px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-height: 120px;
+    min-height: 100px;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 15px;
+  height: 75px;
+
+  @include tablet {
+    padding-bottom: 0;
+    height: 55px;
+  }
+}
+
+.page-footer__logo-link {
+  text-transform: unset;
+
+  @include tablet {
+    height: 28px;
+  }
+}
+
+.page-footer__logo-link:hover svg {
+  fill: yellow;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
+}
+
+.page-footer__logo-link:hover .page-footer__logo-text{
+  font-weight: bold;
+  font-size: 18.5px;
+  color: rgba(255, 255, 10, 1);
+  transition: all 0.5s ease-in;
+}
+
+.page-footer__logo-link:active .page-footer__logo-text,
+.page-footer__logo-link:focus .page-footer__logo-text {
+  font-size: 16px;
+  color: rgba(255, 255, 10, 0.5);
+  transition: all 0.2s ease-in;
+}
+
+.page-footer__logo-link:active svg,
+.page-footer__logo-link:focus svg {
+  fill: rgba(255, 255, 10, 0.8);
+  transform: scale(0.9);
+  transition: all 0.2s ease-in;
+}
+
+.page-footer__logo-link:focus {
+  outline: none;
+}
+
+.page-footer__logo-text {
+  display: block;
+  padding-top: 6px;
+  font: 17px $ms500;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-footer__logo-svg {
+  fill: #ffffff;
+}
+
+.page-footer__logoTablet-text {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    font: 17px/42px $ms500;
+    color: #ffffff;
+    margin-left: 31px;
+    margin-top: -5px;
+  }
+}

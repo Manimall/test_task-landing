@@ -58,18 +58,18 @@
   }
 }
 
-.advantages__logo {
-  fill: red;
-  position: absolute;
-  background-position: center center;
-}
+// .advantages__logo {
+//   fill: red;
+//   position: absolute;
+//   background-position: center center;
+// }
 
 .advantages__item--icon-clock::before {
-  background-image: url("../img/vector/320/icon-time.svg");
+  background-image: url("../img/vector/320/icon-alarm.svg");
 }
 
-.advantages__item--icon-target {
-
+.advantages__item--icon-target::before {
+  background-image: url("../img/vector/320/icon-target.svg");
 }
 
 .advantages__item--icon-quality::before {
