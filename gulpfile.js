@@ -17,22 +17,41 @@ var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
-var livereload = require('gulp-livereload');
+var uglify = require("gulp-uglify");
+var pump = require("pump");
 var svgmin = require("gulp-svgmin");
+var sourcemaps = require("gulp-sourcemaps");
+
+gulp.task("minify", function (cb) {
+  pump([
+    gulp.src("source/js/**/*.js"),
+    sourcemaps.init(),
+    uglify(),
+    rename({suffix: ".min"}),
+    sourcemaps.write(),
+    gulp.dest("build/js/min")
+    ], cb);
+});
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
+
+
 
 gulp.task("svg", function () {
   return gulp.src("source/img/vector/**/*.svg")
@@ -49,18 +68,10 @@ gulp.task("sprite", ["svg"], function () {
     .pipe(gulp.dest("build/img/sprite"));
 });
 
-// gulp.task("sprite", function () {
-//   return gulp.src("source/img/for_sprite/*.svg")
-//     .pipe(svgstore({
-//       inlineSvg: true
-//     }))
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img/sprite"));
-// });
-
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(posthtml([
       include()
     ]))
@@ -72,6 +83,7 @@ gulp.task("html", function() {
       sortAttributes: true,
       sortClassName: true
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("build/"));
 });
 
@@ -93,8 +105,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("clean", function () {
-  return del("source/img/newVector/");
-  return del("build");
+  return del(["source/img/newVector/", "build/"]);
 });
 
 gulp.task("copy", function () {
@@ -110,7 +121,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("build", function (done) {
-  run("clean", "copy", "sprite", "style","html", done);
+  run("clean", "copy", "sprite", "html", "style", "minify", done);
 });
 
 gulp.task("serve", function() {
