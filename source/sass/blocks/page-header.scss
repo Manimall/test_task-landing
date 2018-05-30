@@ -49,6 +49,21 @@
 .page-header__contacts-tel {
   font: 14px/3 $ms700;
 
+  &:hover {
+    border-bottom: 1px solid yellow;
+    color: rgba(248, 243, 43, 1);
+    text-shadow: 0 3px 0 $charcoal-grey;
+    transition: all 0.45s ease-in;
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(248, 243, 43, 0.65);
+    text-shadow: 0 3px 0 $charcoal-grey;
+    outline: none;
+    transition: all 0.15s ease-in;
+  }
+
   @include tablet {
     font-size: 17px;
   }
