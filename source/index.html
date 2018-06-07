@@ -26,14 +26,16 @@
     <div class="page-header__top">
       <div class="page-header__wrapper container">
 
-        <a class="page-header__logo logo" href="https://tsunami.group/">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/vector/1440/logo.svg">
-            <source media="(min-width: 768px)" srcset="img/vector/768/logo.svg">
-            <img class="logo__img" src="img/vector/320/logo.svg" alt="Логотип компании Digital Tsunami" width="110" height="23">
-          </picture>
-          <p class="logo__text">digital-агентство</p>
-        </a>
+        <div class="page-header__logo">
+          <a class="page-header__logo-link" href="https://tsunami.group/" target="_blank">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/vector/1440/logo.svg">
+              <source media="(min-width: 768px)" srcset="img/vector/768/logo.svg">
+              <img class="page-header__logo-img" src="img/vector/320/logo.svg" alt="Логотип компании Digital Tsunami" width="110" height="23">
+            </picture>
+          </a>
+          <p class="page-header__logo-text">digital-агентство</p>
+        </div>
 
         <div class="page-header__contacts">
           <p class="page-header__contacts-city">г. Иваново:</p>
@@ -75,9 +77,6 @@
       </li>
       <li class="advantages__item advantages__item--icon-target">
         <p class="advantages__text">Конверсия <br> от 2 до 35%</p>
-        <!-- <svg class="advantages__logo" width="64" height="61">
-          <use xlink:href="#icon-numbers"></use>
-        </svg> -->
       </li>
       <li class="advantages__item advantages__item--icon-quality">
         <p class="advantages__text">Сделали уже более 100 сайтов</p>
@@ -97,18 +96,18 @@
         <li class="pricelist__item features">
           <h3 class="features__title features__title--active">Длинный лендинг</h3>
 
-          <div class="features__list">
-            <p class="features__text">Домен и хостинг на 1 год</p>
-            <p class="features__text">Адаптивная верстка</p>
-            <p class="features__text">Индивидуальный продающий дизайн</p>
-            <p class="features__text">До 4 логических блоков</p>
-            <p class="features__text">Участие маркетолога</p>
-            <p class="features__text">Составление УТП и триггеров</p>
-            <p class="features__text">Установка и настройка онлайн-консультанта</p>
-            <p class="features__text">Написание уникальных продающих текстов</p>
-            <p class="features__text">Настройка целей для Я.Метрики и G.Analytics</p>
-            <p class="features__text features__text--transparent">Регистрация сайта в панелях вебмастера</p>
-          </div>
+          <ul class="features__list">
+            <li class="features__text">Домен и хостинг на 1 год</li>
+            <li class="features__text">Адаптивная верстка</li>
+            <li class="features__text">Индивидуальный продающий дизайн</li>
+            <li class="features__text">До 4 логических блоков</li>
+            <li class="features__text">Участие маркетолога</li>
+            <li class="features__text">Составление УТП и триггеров</li>
+            <li class="features__text">Установка и настройка онлайн-консультанта</li>
+            <li class="features__text">Написание уникальных продающих текстов</li>
+            <li class="features__text">Настройка целей для Я.Метрики и G.Analytics</li>
+            <li class="features__text features__text--transparent">Регистрация сайта в панелях вебмастера</li>
+          </ul>
 
           <b class="features__price">34 000</b>
           <a class="features__btn btn" href="#">Заказать</a>
@@ -117,18 +116,18 @@
         <li class="pricelist__item features">
           <h3 class="features__title">Короткий лендинг</h3>
 
-          <div class="features__list">
-            <p class="features__text">Домен и хостинг на 1 год</p>
-            <p class="features__text">Адаптивная верстка</p>
-            <p class="features__text">Индивидуальный продающий дизайн</p>
-            <p class="features__text">До 4 логических блоков</p>
-            <p class="features__text">Участие маркетолога</p>
-            <p class="features__text">Составление УТП и триггеров</p>
-            <p class="features__text">Установка и настройка онлайн-консультанта</p>
-            <p class="features__text features__text--transparent">Написание уникальных продающих текстов</p>
-            <p class="features__text features__text--transparent">Настройка целей для Я.Метрики и G.Analytics</p>
-            <p class="features__text features__text--transparent">Регистрация сайта в панелях вебмастера</p>
-          </div>
+          <ul class="features__list">
+            <li class="features__text">Домен и хостинг на 1 год</li>
+            <li class="features__text">Адаптивная верстка</li>
+            <li class="features__text">Индивидуальный продающий дизайн</li>
+            <li class="features__text">До 4 логических блоков</li>
+            <li class="features__text">Участие маркетолога</li>
+            <li class="features__text">Составление УТП и триггеров</li>
+            <li class="features__text">Установка и настройка онлайн-консультанта</li>
+            <li class="features__text features__text--transparent">Написание уникальных продающих текстов</li>
+            <li class="features__text features__text--transparent">Настройка целей для Я.Метрики и G.Analytics</li>
+            <li class="features__text features__text--transparent">Регистрация сайта в панелях вебмастера</li>
+          </ul>
 
           <b class="features__price">19 000</b>
           <a class="features__btn btn" href="#">Заказать</a>
@@ -137,18 +136,18 @@
         <li class="pricelist__item features">
           <h3 class="features__title">Нестандартный лендинг</h3>
 
-          <div class="features__list">
-            <p class="features__text">Домен и хостинг на 1 год</p>
-            <p class="features__text">Адаптивная верстка</p>
-            <p class="features__text">Индивидуальный продающий дизайн</p>
-            <p class="features__text">До 4 логических блоков</p>
-            <p class="features__text">Участие маркетолога</p>
-            <p class="features__text">Составление УТП и триггеров</p>
-            <p class="features__text">Установка и настройка онлайн-консультанта</p>
-            <p class="features__text">Написание уникальных продающих текстов</p>
-            <p class="features__text">Настройка целей для Я.Метрики и G.Analytics</p>
-            <p class="features__text">Регистрация сайта в панелях вебмастера</p>
-          </div>
+          <ul class="features__list">
+            <li class="features__text">Домен и хостинг на 1 год</li>
+            <li class="features__text">Адаптивная верстка</li>
+            <li class="features__text">Индивидуальный продающий дизайн</li>
+            <li class="features__text">До 4 логических блоков</li>
+            <li class="features__text">Участие маркетолога</li>
+            <li class="features__text">Составление УТП и триггеров</li>
+            <li class="features__text">Установка и настройка онлайн-консультанта</li>
+            <li class="features__text">Написание уникальных продающих текстов</li>
+            <li class="features__text">Настройка целей для Я.Метрики и G.Analytics</li>
+            <li class="features__text">Регистрация сайта в панелях вебмастера</li>
+          </ul>
 
           <b class="features__price">60 000</b>
           <a class="features__btn btn" href="#">Заказать</a>
@@ -322,7 +321,7 @@
       <div class="contacts__wrapper">
 
         <div class="contacts__heading">
-          <a class="contacts__logo" href="https://tsunami.group/">
+          <a class="contacts__logo" href="https://tsunami.group/" target="_blank">
             <svg class="contacts__logo-img" width="132" height="28" role="img">
               <title>Компания Digital Tsunami</title>
               <use xlink:href="#logo-contacts"></use>
@@ -387,7 +386,7 @@
     <div class="page-footer__wrapper container">
 
       <div class="page-footer__logo">
-        <a class="page-footer__logo-link" href="https://tsunami.group/">
+        <a class="page-footer__logo-link" href="https://tsunami.group/" target="_blank">
           <svg class="page-footer__logo-svg" width="132" height="28" role="img">
             <use xlink:href="#logo"></use>
           </svg>
@@ -452,8 +451,6 @@
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZef9VPHAYfM1gCURr-_CfjkiFLwld4rU&callback=initialize"></script>
   <script src="js/min/picturefill.min.js"></script>
-  <script src="js/min/svg4everybody.min.js"></script>
-  <script>svg4everybody();</script>
 
 </body>
 </html>

@@ -9,6 +9,7 @@
   border-radius: 4px;
   min-width: 254px;
   transition: all 0.5s ease-in;
+  cursor: pointer;
 
   &:hover {
     border: solid 1px $navColor;
@@ -23,7 +24,6 @@
 
   @include desktop {
     margin-right: 0;
-    cursor: pointer;
     margin-left: 0;
   }
 }

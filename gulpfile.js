@@ -135,5 +135,5 @@ gulp.task("serve", function() {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]).on("change", server.reload);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js").on("change", server.reload);
+  gulp.watch("source/js/*.js", ["minify"]).on("change", server.reload);
 });
